@@ -12,10 +12,11 @@ from ultralytics import YOLO
 
 ctypes.windll.user32.SetProcessDPIAware()
 
-device = "cuda:0" # или cpu!!!
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Using device: {device}")
 
 model = YOLO("yolo11s.pt")
+model.to(device)
 
 FOV_RADIUS = 200
 
