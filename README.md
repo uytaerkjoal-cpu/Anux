@@ -13,4 +13,4 @@ Ai
 * Dot ESP
 
 ### Technical
-* Pygame Overlay
+* Overlay
